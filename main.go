@@ -13,7 +13,10 @@ import (
 // --------------
 
 const (
-	_day = -7
+	_day      = -7
+	_cRoom    = "rooms"
+	_cMessage = "messages"
+	_cMember  = "members"
 )
 
 const _cMsgAt = "message_at"
@@ -57,8 +60,6 @@ func main() {
 
 //----------------------
 
-const _cRoom = "rooms"
-
 // Room :
 type Room struct {
 	ChatroomID string    `bson:"_id" mapstructure:"_id"`
@@ -67,11 +68,6 @@ type Room struct {
 	CreatedAt  time.Time `bson:"ts" mapstructure:"ts"`
 	UT         time.Time `bson:"ut" mapstructure:"ut"`
 }
-
-const (
-	_cMessage = "messages"
-	_cMember  = "members"
-)
 
 // Message :
 type Message struct {
